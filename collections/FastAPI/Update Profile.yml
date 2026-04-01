@@ -1,0 +1,33 @@
+info:
+  name: Update Profile
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/profile"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: Successful Response
+    request:
+      url: "{{baseUrl}}/profile"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: ""

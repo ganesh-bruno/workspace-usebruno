@@ -1,0 +1,28 @@
+opencollection: 1.0.0
+
+info:
+  name: FastAPI
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
+    openapi:
+      - sourceUrl: http://127.0.0.1:8000/openapi.json
+        groupBy: tags
+        lastSyncDate: 2026-03-30T08:24:54.767Z
+        specHash: 4c613cafae280db29ed65d82d2932a06
+        autoCheck: true
+        autoCheckInterval: 5

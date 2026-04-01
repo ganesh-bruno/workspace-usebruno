@@ -1,0 +1,7 @@
+info:
+  name: Web Sockets
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit

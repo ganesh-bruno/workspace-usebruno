@@ -1,0 +1,43 @@
+opencollection: 1.0.0
+
+info:
+  name: API_Test_Suite
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  auth:
+    type: oauth2
+    flow: authorization_code
+    authorizationUrl: http://localhost:3000/authorize
+    accessTokenUrl: http://localhost:3000/token
+    callbackUrl: http://localhost:3000/callback
+    credentials:
+      clientId: bruno-client
+      clientSecret: bruno-secret
+      placement: body
+    scope: profile email
+    pkce: {}
+    tokenConfig:
+      id: credentials
+      placement:
+        header: Bearer
+      source: access_token
+    settings:
+      autoFetchToken: true
+      autoRefreshToken: false
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
