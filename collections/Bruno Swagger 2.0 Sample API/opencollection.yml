@@ -1,0 +1,28 @@
+opencollection: 1.0.0
+
+info:
+  name: Bruno Swagger 2.0 Sample API
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
+    openapi:
+      - sourceUrl: ../../../../Downloads/workspace/collections/bruno-collection/dump/swagger-2-sample.yaml
+        groupBy: tags
+        lastSyncDate: 2026-04-16T13:02:23.151Z
+        specHash: 9e2adfc2aae7d87723e38ea04f6ee9da
+        autoCheck: true
+        autoCheckInterval: 5

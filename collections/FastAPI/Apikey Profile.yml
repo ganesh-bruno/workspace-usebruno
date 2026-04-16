@@ -15,6 +15,12 @@ http:
     value: "{{apiKey}}"
     placement: header
 
+runtime:
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "200"
+
 settings:
   encodeUrl: true
   timeout: 0

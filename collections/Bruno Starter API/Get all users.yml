@@ -1,17 +1,12 @@
 info:
-  name: Register
+  name: Get all users
   type: http
   seq: 1
 
 http:
   method: GET
-  url: https://api.github.com/users/usebruno
+  url: "{{baseUrl}}/users"
   auth: inherit
-
-runtime:
-  variables:
-    - name: cacad
-      value: dc
 
 settings:
   encodeUrl: true
@@ -21,10 +16,10 @@ settings:
 
 examples:
   - name: 200 Response
-    description: Successful Response
+    description: Successful response
     request:
-      url: "{{baseUrl}}/register"
-      method: POST
+      url: "{{baseUrl}}/users"
+      method: GET
     response:
       status: 200
       statusText: OK
@@ -33,4 +28,13 @@ examples:
           value: application/json
       body:
         type: json
-        data: ""
+        data: |-
+          [
+            {
+              "id": 1,
+              "name": "Ganesh",
+              "email": "ganesh@example.com"
+            }
+          ]
+
+docs: Returns a list of users

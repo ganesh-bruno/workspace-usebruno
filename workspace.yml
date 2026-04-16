@@ -1,24 +1,14 @@
 opencollection: 1.0.0
 info:
-  name: "master-workspace"
+  name: "usebruno-workspace"
   type: workspace
 
 collections:
-  - name: "API_Test_Suite"
-    path: "collections/API_Test_Suite"
-  - name: "demo"
-    path: "../bruno/demo"
-  - name: "FastAPI"
-    path: "collections/FastAPI"
-  - name: "Swagger Petstore - OpenAPI 3.0"
-    path: "collections/Swagger Petstore - OpenAPI 3.0"
-  - name: "Swagger Petstore - OpenAPI 3.0 - 1"
-    path: "collections/Swagger Petstore - OpenAPI 3.0 - 1"
-  - name: "demo - 1"
-    path: "../bruno/demo - 1"
+  - name: "external-libraries"
+    path: "../../Downloads/workspace/collections/bruno-collection/external-libraries"
+  - name: "Bruno Starter guide"
+    path: "collections/bruno-starter-guide"
 
 specs:
 
 docs: ''
-
-activeEnvironmentUid: y83efn000000000000000
